@@ -110,28 +110,6 @@ export const Hero: React.FC = () => {
               </span>
             </motion.a>
           </motion.div>
-
-          <motion.div
-            className="flex items-center justify-center lg:justify-start gap-8 mt-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            {resumeData.basics.links.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -5, transition: { type: "spring", stiffness: 400, damping: 17 } }}
-                whileTap={{ scale: 0.9 }}
-                className="text-purple-400 hover:text-purple-200 transition-colors duration-200"
-              >
-                <span className="sr-only">{link.name}</span>
-                {getIcon(link.name)}
-              </motion.a>
-            ))}
-          </motion.div>
         </motion.div>
 
         <motion.div
