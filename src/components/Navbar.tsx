@@ -44,9 +44,6 @@ export const Navbar: React.FC = () => {
             </span>
             Welcome, Explorer ✦
           </a>
-          <div className="hidden lg:flex items-center gap-1.5 px-2 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-xs text-purple-400/70 font-mono">
-            <span>⌘</span><span>K</span>
-          </div>
         </div>
 
         {/* Desktop Navbar */}

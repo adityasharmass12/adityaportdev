@@ -33,9 +33,13 @@ export const Projects: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center justify-center p-12 border border-purple-500/20 bg-purple-900/10 backdrop-blur-xl rounded-2xl shadow-[0_8px_32px_0_rgba(139,92,246,0.1)] text-center"
         >
-          <div className="p-4 bg-purple-500/20 rounded-full text-purple-300 mb-6">
+          <motion.div 
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="p-4 bg-purple-500/20 rounded-full text-purple-300 mb-6"
+          >
             <FolderGit2 size={40} />
-          </div>
+          </motion.div>
           <h3 className="text-2xl font-semibold text-purple-100 mb-3 flex items-center justify-center gap-2">
             Architecting New Solutions
             <motion.span

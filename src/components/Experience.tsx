@@ -35,7 +35,11 @@ export const Experience: React.FC = () => {
           >
             {/* Timeline Dot */}
             <div className="hidden md:flex flex-col items-center mt-10 z-10 ml-7">
-              <div className="w-3 h-3 rounded-full bg-[#090414] border-2 border-fuchsia-400 shadow-[0_0_10px_rgba(217,70,239,0.5)]"></div>
+              <motion.div 
+                animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7], boxShadow: ["0 0 10px rgba(217,70,239,0.5)", "0 0 20px rgba(217,70,239,0.8)", "0 0 10px rgba(217,70,239,0.5)"] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
+                className="w-3 h-3 rounded-full bg-[#090414] border-2 border-fuchsia-400"
+              />
             </div>
 
             <SpotlightCard

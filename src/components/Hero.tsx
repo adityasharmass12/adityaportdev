@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
           </motion.div>
 
           <motion.h1 
-            className="mb-4 text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-purple-300 font-display sm:text-7xl lg:text-8xl inline-block cursor-default"
+            className="mb-4 text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-purple-300 font-display sm:text-7xl lg:text-8xl inline-block cursor-default animate-gradient"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -140,15 +140,24 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex-1 relative max-w-[320px] w-full mt-10 lg:mt-0"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-fuchsia-500/20 rounded-3xl blur-2xl transform rotate-6 scale-105" />
-          <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border border-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.2)]">
-            <img 
-              src="/my-image.jpg.jpeg" 
-              alt="Aditya Sharma" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </div>
+          <motion.div
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-fuchsia-500/20 rounded-3xl blur-2xl transform rotate-6 scale-105" />
+            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden border border-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.2)] group">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090414] via-transparent to-transparent opacity-80 z-10 transition-opacity duration-500 group-hover:opacity-40" />
+              <img 
+                src="/my-image.jpg.jpeg" 
+                alt="Aditya Sharma" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex items-center justify-between">
+                <p className="text-purple-200 font-mono text-sm font-semibold bg-[#090414]/80 px-3 py-1.5 rounded-lg backdrop-blur-md border border-purple-500/30">Hello World 👋</p>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

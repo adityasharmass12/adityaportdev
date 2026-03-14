@@ -30,9 +30,13 @@ export const Education: React.FC = () => {
             <SpotlightCard className="p-6 sm:p-8 border border-purple-500/20 bg-purple-900/10 backdrop-blur-xl rounded-2xl overflow-hidden shadow-[0_8px_32px_0_rgba(139,92,246,0.1)]">
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-purple-500/20 rounded-xl text-purple-300 shrink-0">
+                  <motion.div 
+                    whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                    className="p-3 bg-purple-500/20 rounded-xl text-purple-300 shrink-0"
+                  >
                     <GraduationCap size={24} />
-                  </div>
+                  </motion.div>
                   <div>
                     <h3 className="text-xl font-semibold text-purple-100">{edu.institution}</h3>
                     {edu.degree && <p className="text-purple-300/80 mt-1">{edu.degree}</p>}

@@ -63,6 +63,10 @@ export const Skills: React.FC = () => {
                 return (
                   <motion.span
                     key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 + i * 0.05, duration: 0.3 }}
                     whileHover={{ scale: 1.05, backgroundColor: "rgba(168,85,247,0.2)", borderColor: "rgba(168,85,247,0.4)" }}
                     className="flex items-center gap-2 px-3 py-1.5 text-sm text-purple-200 bg-purple-500/10 border border-purple-500/20 rounded-full cursor-default"
                   >

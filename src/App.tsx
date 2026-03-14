@@ -49,7 +49,7 @@ export default function App() {
       <AnimatedBackground />
       
       {/* Subtle Tech Grid Background */}
-      <div className="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+      <div className="fixed inset-[-24px] z-[-1] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none animate-grid"></div>
       
       {/* Subtle Coding Tags */}
       <div className="fixed top-4 left-4 text-purple-500/10 font-mono text-xl pointer-events-none z-[-1] hidden md:block">&lt;html&gt;</div>
